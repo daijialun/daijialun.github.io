@@ -21,4 +21,4 @@ categories: Paper
 
 推到公式中，使用平方误差损失函数（squared-error loss function）
 
-![screenshot]({{ site.url }}/assets/squared-error_loss_function.png)
+![screenshot]({{ site.url }}/assets/20151016/squared-error_loss_function.png)
