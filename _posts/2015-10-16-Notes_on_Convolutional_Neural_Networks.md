@@ -22,3 +22,27 @@ categories: Paper
 推到公式中，使用平方误差损失函数（squared-error loss function）
 
 ![screenshot]({{ site.url }}/assets/20151016/squared-error_loss_function.png)
+
+t_k_n中，第n个模式对应的第k维特征；y_k_n是第n个输入模式对应的输出层的第k个值。对于多类分类问题，如果X_n对应第k类，则t_n的第k个值是正的。根据你activation function，t_n的其他值可能是零或者负值。
+
+因为整个数据集的错误率只是每个样本错误率之和，
+
+#### Backpropagation Pass
+
+### Convolutional Neural Networks
+
+传统的卷积层注重sub-sampling层，来减少计算实际，以及简历更深的空间与结构不变性。小的sub-sampling因素是需要的，同时为了保持specificity（特异性）。这个想法并不是新的，但是概念却是简单实用的。动物的视觉突触与听觉神经已经被研究了过去几十年。多层次的分析与学习框架可能成为听觉领域成功的关键。
+
+#### Convolution Layers
+
+##### Computing the Gradients
+
+#### Sub-sampling Layers
+
+##### Computing the Gradients
+
+#### Learning Combinations of Feature Maps
+
+##### Enforcing Sparse Combinations
+
+#### Making it Fast with Matlab
