@@ -2,7 +2,7 @@
 layout: post
 title:  "论文解读《Notes on Convolutional Neural Networks》"
 date:   2015-10-16
-categories: Paper
+categories: PaperReading
 ---
 
 ## Paper Reading
