@@ -124,6 +124,7 @@ categories: DeepLearnig
 ![delta4]({{url.site}}/assets/20151105/delta4.png)   <4x1> 
 
 ![delta3]({{url.site}}/assets/20151105/delta3.png)<6x1>    Theta3{T}<6x4> delta4<4x1> a3<6x1> (1-a3) <6x1>      （根据连接关系，反向推导delta3，参考Week5 Cost Function and Backpropagation）
+（上述公式与下面矩阵就J(Theta)公式相似，只不过增加了对激励函数求导的计算）
 
 ![delta2]({{url.site}}/assets/20151105/delta2.png)<6x1>    Theta2{T}<6x5> delta3<5x1> （由于delta3计算了bias，但是bias只被计算，不参加反向。因此delta3由<6x1>变为<5x1>） a3<6x1> (1-a3) <6x1> 
 
@@ -131,9 +132,11 @@ categories: DeepLearnig
 
 ![partial]({{url.site}}/assets/20151105/partial.png)   <s{j+1} x s{j}+1> delta{l+1}<(s{j+1}) x 1> a{l}<1 x s{j}+1>
 
-![Delta]({{url.site}}/assets/20151105/Delta.png)  <s{l+1} x s{l}+1>   这里一个Delata代表一个样本，相加表示对所有样本计算误差
+![Delta]({{url.site}}/assets/20151105/Delta.png)  <s{l+1} x s{l}+1>   这里一个Delata代表一个样本，相加表示对所有m个样本计算总梯度
 
-![Dij]({{url.site}}/assets/20151105/Dij.png) <s{l+1} x s{l}+1>  这里Delta除以m，表示求样本的平均误差，lambda表示正则项的约束
+![Dij]({{url.site}}/assets/20151105/Dij.png) <s{l+1} x s{l}+1>  这里Delta除以m，表示求m个样本的平均梯度，lambda表示正则项的约束
+
+（对于单个样本，且不计算正则化的情况下，网络梯度为![singlesample]({{url.site}}/assets/20151105/singlesample.png)）
 
 ![partial_3]({{url.site}}/assets/20151105/partial_3.png) <4x6> delta4<4x1> a3T<1x6> （可用矩阵行列乘法，理解其计算意义）
 
@@ -147,4 +150,8 @@ categories: DeepLearnig
 
 ![D_1]({{url.site}}/assets/20151105/D_1.png)    <5x4>   1到2层连接的样本平均梯度
 
-![ThetaD]({{url.site}}/assets/20151105/ThetaD.png) 
+![ThetaD]({{url.site}}/assets/20151105/ThetaD.png)    最终i梯度计算结果的表示
+
+![update]({{url.site}}/assets/20151105/update.png)   更新连接weights计算
+
+![comparision]({{url.site}}/assets/20151105/comparision.png)   先计算delta，计算误差<s{l} x 1>；再计算D梯度，使用之前计算的delta<s{l+1} x s{l}+1>
