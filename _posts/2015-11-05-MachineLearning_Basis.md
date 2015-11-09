@@ -105,6 +105,10 @@ categories: DeepLearnig
 
 ![nn]({{url.site}}/assets/20151105/nn.png)     表示四层neural network
 
+![Theta_lij]({{url.site}}/assets/20151105/Theta_lij.png)  表示正向pass中，在 l 层上，第 j 个神经元对应，l+1层上，第 i 个神经元的权值系数
+
+![Theta_lijT]({{url.site}}/assets/20151105/Theta_lijT.png)   表示反向pass中，在 l+1 层上，第 i 个神经元对应，l 层上第 j 个神经元
+
 ![a_1]({{url.site}}/assets/20151105/a_1.png)  <4X1>
 
 ![z_2]({{url.site}}/assets/20151105/z_2.png)  Theta1<5x4> a1<4x1> = z2<5x1>
