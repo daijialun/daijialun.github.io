@@ -2,7 +2,7 @@
 layout: post
 title:  "Machine Learning 基础公式"
 date:   2015-11-05
-categories: DeepLearnig
+categories: DeepLearning
 ---
 
 # Machine Learning 基础公式
