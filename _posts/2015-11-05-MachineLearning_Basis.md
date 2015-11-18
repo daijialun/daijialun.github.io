@@ -159,3 +159,38 @@ categories: DeepLearning
 ![update]({{url.site}}/assets/20151105/update.png)   更新连接weights计算
 
 ![comparision]({{url.site}}/assets/20151105/comparision.png)   先计算delta，计算误差<s{l} x 1>；再计算D梯度，使用之前计算的delta<s{l+1} x s{l}+1>
+
+### CNN example
+
+![c_xjl]({{url.site}}/assets/20151115/c_xlj.png)   表示第 l 层上第 j 个feature map
+
+卷积层前向：
+
+![c_xjl_f]({{url.site}}/assets/20151115/c_xlj_f.png)   表示经过convolution，第 l 层上第 j 个feature map由 l-1 层计算得到，其中k{l}表示 l-1 层到 l 层的连接卷积权值，与之前的表示形式不一样
+
+Subsampling层后向：
+
+![p_xjl]({{url.site}}/assets/20151118/p_xlj.png)   表示经过subsampling，第 l 层上第 j 个feature map由 l-1 层计算得到，这里feature map的个数不变，都是 j 个，down()表示对像素点进行相加求和
+
+卷积层后向误差：
+
+![cb_djl]({{url.site}}/assets/20151118/cb_dlj.png)   表示经过 l+1 层的delta{l+1}反向传播到 l 层得到delta{l}，其中up表示将 1x1 像素拓展为 NxN 像素
+
+subsampling层后向误差：
+
+![pb_djl]({{url.site}}/assets/20151118/pb_dlj.png)   表示经过 l+1 层的delta{l+1}反向传播到 l 层得到delta{l}
+
+卷积层梯度求导：
+
+![d_c]({{url.site}}/assets/20151118/d_c.png)   
+
+![d_c1]({{url.site}}/assets/20151118/d_c1.png)  
+
+![d_c2]({{url.site}}/assets/20151118/d_c2.png)  
+
+subsampling梯度求导：
+
+![d_c2]({{url.site}}/assets/20151118/d_c2.png)  
+
+![d_p1]({{url.site}}/assets/20151118/d_p1.png)  
+
