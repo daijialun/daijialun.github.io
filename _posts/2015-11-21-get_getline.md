@@ -7,7 +7,11 @@ categories: C++
 
 # C++ getline与get使用区别
 
-参考文章[C++中，get getline gets 用法 ](http://blog.sina.com.cn/s/blog_88feaf0b0100ynnn.html)
+参考文章[C++中，get getline gets 用法 ](http://blog.sina.com.cn/s/blog_88feaf0b0100ynnn.html)，[get( )与getline( )区别](http://www.cnblogs.com/qlwy/archive/2011/11/03/2235126.html)
+
+cin.get()遇到'\n'字符后便返回，即数组中存储了输入字符，但是不存储'\n'，'\n'还在输入缓冲区，下次读出的仍是'\n'；而cin.getline()遇到'\n'也返回，但是其会把'\n'从输入缓冲区里移除掉。所以大多数时候，用cin.getline更方便。
+
+**cin.get()保留'\n'，留给下次输入；cin.getline()抛弃'\n'，下次则可正常输入**
 
 ## cin
 
