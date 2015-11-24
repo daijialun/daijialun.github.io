@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "getline和get使用区别"
-date:   2015-11-20
+date:   2015-11-21
 categories: C++
 ---
 
