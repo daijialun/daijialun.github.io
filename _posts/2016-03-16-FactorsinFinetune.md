@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Factors in Finetuning Deep Model for object detection"
+title:  "《Factors in Finetuning Deep Model for object detection》论文解读"
 date:   2016-03-16
 categories: PaperReading
 ---
